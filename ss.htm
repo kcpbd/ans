@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANSWER</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .question {
+        margin-bottom: 10px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<audio loop autoplay>
+    <source src="abc.mp3" type="audio/mp3">
+  </audio>
+<form id="quizForm">
+    <div class="question">
+        <p>1. b</p>
+        <label><input type="radio" name="q1" value="b"> b</label>
+    </div>
+    <div class="question">
+        <p>2. c</p>
+        <label><input type="radio" name="q2" value="c"> c</label>
+    </div>
+    <div class="question">
+        <p>3. c</p>
+        <label><input type="radio" name="q3" value="c"> c</label>
+    </div>
+    <div class="question">
+        <p>4. c</p>
+        <label><input type="radio" name="q4" value="c"> c</label>
+    </div>
+    <div class="question">
+        <p>5. c</p>
+        <label><input type="radio" name="q5" value="c"> c</label>
+    </div>
+    <div class="question">
+        <p>6. a</p>
+        <label><input type="radio" name="q6" value="a"> a</label>
+    </div>
+    <div class="question">
+        <p>7. d</p>
+        <label><input type="radio" name="q7" value="d"> d</label>
+    </div>
+    <div class="question">
+        <p>8. b</p>
+        <label><input type="radio" name="q8" value="b"> b</label>
+    </div>
+    <div class="question">
+        <p>9. c</p>
+        <label><input type="radio" name="q9" value="c"> c</label>
+    </div>
+    <div class="question">
+        <p>10. c</p>
+        <label><input type="radio" name="q10" value="c"> c</label>
+    </div>
+    <div class="question">
+        <p>11. </p>
+        <label><input type="radio" name="q11" value=""> </label>
+    </div>
+    <div class="question">
+        <p>12. </p>
+        <label><input type="radio" name="q12" value=""> </label>
+    </div>
+    <div class="question">
+        <p>13. wrong question</p>
+        <label><input type="radio" name="q13" value="wrong question"> wrong question</label>
+    </div>
+    <div class="question">
+        <p>14. </p>
+        <label><input type="radio" name="q14" value=""> </label>
+    </div>
+    <div class="question">
+        <p>15. a</p>
+        <label><input type="radio" name="q15" value="a"> a</label>
+    </div>
+    <div class="question">
+        <p>16. b</p>
+        <label><input type="radio" name="q16" value="b"> b</label>
+    </div>
+    <div class="question">
+        <p>17. d</p>
+        <label><input type="radio" name="q17" value="d"> d</label>
+    </div>
+    <div class="question">
+        <p>18. </p>
+        <label><input type="radio" name="q18" value=""> </label>
+    </div>
+    <div class="question">
+        <p>19. d</p>
+        <label><input type="radio" name="q19" value="d"> d</label>
+    </div>
+    <div class="question">
+        <p>20. </p>
+        <label><input type="radio" name="q20" value=""> </label>
+    </div>
+    <div class="question">
+        <p>21. c</p>
+        <label><input type="radio" name="q21" value="c"> c</label>
+    </div>
+    <div class="question">
+        <p>22. d</p>
+        <label><input type="radio" name="q22" value="d"> d</label>
+    </div>
+    <div class="question">
+        <p>23. d</p>
+        <label><input type="radio" name="q23" value="d"> d</label>
+    </div>
+    <div class="question">
+        <p>24. a</p>
+        <label><input type="radio" name="q24" value="a"> a</label>
+    </div>
+    <div class="question">
+        <p>25. b</p>
+        <label><input type="radio" name="q25" value="b"> b</label>
+    </div>
+    
+   
+</form>
+
+<script>
+function submitQuiz() {
+    const form = document.getElementById('quizForm');
+    const formData = new FormData(form);
+    let result = '';
+    for (const entry of formData.entries()) {
+        result += `${entry[0]}=${entry[1]}<br>`;
+    }
+    document.getElementById('quizResult').innerHTML = result;
+}
+</script>
+
+<div id="quizResult"></div>
+
+</body>
+</html>
